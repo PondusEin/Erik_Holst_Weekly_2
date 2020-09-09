@@ -158,9 +158,45 @@ void task7() {
     std::cout << "7. Update task 6 to accept both capital and lower case letter.\n E.g. both 'A' & 'a' etc. are valid answers.\n\n\n";
     std::cout << "This has been added, try it out!"; //In reality, it was allready there, but now the player is interested to try again.
 
-}
-void menu() {
+    char done7 = _getch();
 
+}
+
+void menu() {
+    do 
+    {
+        int task;
+        std::cout << "Please choose a task [1-7]: ";
+        std::cin >> task;
+
+        switch (task)
+        {
+        case 1:
+            task1();
+            break;
+        case 2:
+            task2();
+            break;
+        case 3:
+            task3();
+            break;
+        case 4:
+            task4();
+            break;
+        case 5:
+            task5();
+            break;
+        case 6:
+            task6();
+            break;
+        case 7:
+            task7();
+        default:
+            std::cout << "Try picking a number again: ";
+            break;
+        }
+        
+    } while (true);
 }
 
 int main()

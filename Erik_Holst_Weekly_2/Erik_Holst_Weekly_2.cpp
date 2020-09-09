@@ -23,10 +23,16 @@ int getintfromuser() {
 
 void task1() 
 {
+    int i{ 0 };
+    int input;
     //Output immediatly
-    std::cout << "1. Write a program that writes from 1 to 100." << '\n' << std::endl;
-    std::cout << "1.1. Use a while-loop:\n" << std::endl;
+    std::cout << "1. Write a program that writes from 1 to 100." << '\n' <<"Select 1 for while-loop or 2 for for-loop"<< std::endl;
+    std::cin >> input;
+
     
+    std::cout << "1.1. Use a while-loop:\n" << std::endl;
+
+
     int count{ 1 };
     while (count < 101) {
         std::cout << count << ' ';
@@ -93,13 +99,15 @@ void task5() {
     std::cout << "5. Make a program that writes 5 to 50 in steps of 5. Use..while." << '\n' << "TBA\n\n" << std::endl;
 
     int count5{ 5 };
-    while (count5 <= 50)
-    {
+    do {
+        (count5 <= 50);
+         
         std::cout << count5 << ' ';
         count5 == 50;
         count5 += 5;
-    }
-    std::cout << "\nDone! This was while-loop!\n\n\n";
+         
+    } while (true);
+        std::cout << "\nDone! This was while-loop!\n\n\n";
     char done5 = _getch();
 }
 
@@ -147,7 +155,8 @@ void task6() {
 }
 
 void task7() {
-
+    std::cout << "7. Update task 6 to accept both capital and lower case letter.\n E.g. both 'A' & 'a' etc. are valid answers.\n\n\n";
+    std::cout << "This has been added, try it out!"; //In reality, it was allready there, but now the player is interested to try again.
 
 }
 void menu() {
@@ -158,9 +167,9 @@ int main()
 {
     system("cls");
     std::cout << "This is Erik Holst's assignment Weekly 2.\n";
-    std::cout << "It conatins 8 tasks now. \n";
-    std::cout << "Some task are just information on the task or previous task, while task 7 is interactive.\n";
-    std::cout << "To choose a task, type a number between 1 and 8, then press enter. \n";
+    std::cout << "It conatins 7 tasks now. \n";
+    std::cout << "Some task are just information on the task or previous task, while task 6 is interactive.\n";
+    std::cout << "To choose a task, type a number between 1 and 7, then press enter. \n";
 
 
     menu();

@@ -23,23 +23,27 @@ int getintfromuser() {
 
 void task1() 
 {
+
+    system("cls");
     int i{ 0 };
     int input;
     //Output immediatly
-    std::cout << "1. Write a program that writes from 1 to 100." << '\n' <<"Select 1 for while-loop or 2 for for-loop"<< std::endl;
+    std::cout << "1. Write a program that writes from 1 to 100." << '\n' <<"Select [1] for while-loop or [2] for for-loop"<< std::endl;
     std::cin >> input;
 
-    
-    std::cout << "1.1. Use a while-loop:\n" << std::endl;
+    switch (input){
+    case 1:
+        std::cout << "1.1. Use a while-loop:\n" << std::endl;
 
 
-    int count{ 1 };
-    while (count < 101) {
-        std::cout << count << ' ';
-        count++;
+        while (i < 101) {
+         std::cout << i << ' ';
+         i++;
     }
+    
     std::cout << "\nDone! This was while-loop!\n\n\n" << std::endl;
-
+    break;
+    case 2:
     std::cout << "1.2. Use a for-loop:\n" << std::endl;
 
     for (int count1{ 1 }; count1 < 101; count1++) {
@@ -47,12 +51,14 @@ void task1()
 
     }
     std::cout << "\nDone! This was for-loop!\n\n\n" << std::endl;
+    break;
+    }
     char done1 = _getch();
 
 }
 
 void task2() {
-
+    system("cls");
     //Output immediatly
     std::cout << "2. Write a program that writes number from 100 down to 1 to screen. Use for-loop\n" << std::endl;
 
@@ -68,7 +74,7 @@ void task2() {
 }
 
 void task3() {
-
+    system("cls");
     std::cout << "3. Make a program that writes 5 to 50 in steps of 5. Use a while loop.\n" << std::endl;
     int count5{ 5 };
     while (count5 < 51)
@@ -83,6 +89,7 @@ void task3() {
 
 
 void task4() {
+    system("cls");
     std::cout << "4. Make a program that writes 5 to 50 in steps of 5. Use a for loop.\n" << std::endl;
     for (int count6{ 5 }; count6 <= 50; count6 += 5)
     {
@@ -96,25 +103,25 @@ void task4() {
 
 
 void task5() {
-    std::cout << "5. Make a program that writes 5 to 50 in steps of 5. Use..while." << '\n' << "TBA\n\n" << std::endl;
+    system("cls");
+    std::cout << "5. Make a program that writes 5 to 50 in steps of 5. Use do-while." << '\n'  << std::endl;
 
-    int count5{ 5 };
+    int i{ 5 };
     do {
-        (count5 <= 50);
+        
          
-        std::cout << count5 << ' ';
-        count5 == 50;
-        count5 += 5;
-         
-    } while (true);
-        std::cout << "\nDone! This was while-loop!\n\n\n";
+        std::cout << i << ' ';
+        i = i + 5;
+        
+    } while (i <= 50);
+        std::cout << "\nDone! This was do-while!\n\n\n";
     char done5 = _getch();
 }
 
 
 
 void task6() {
-   
+    system("cls");
     std::cout << "6. Make a program that ask user what grade they want in Programming 1. Use switch.\n" << std::endl;
 
     char grade;
@@ -155,8 +162,9 @@ void task6() {
 }
 
 void task7() {
+    system("cls");
     std::cout << "7. Update task 6 to accept both capital and lower case letter.\n E.g. both 'A' & 'a' etc. are valid answers.\n\n\n";
-    std::cout << "This has been added, try it out!"; //In reality, it was allready there, but now the player is interested to try again.
+    std::cout << "This has been added, try it out!" << '\n' << std::endl; //In reality, it was allready there, but now the player is interested to try again.
 
     char done7 = _getch();
 

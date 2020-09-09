@@ -6,10 +6,26 @@
 #include <conio.h>
 #include <limits>
 
+int getintfromuser() {
+    int integer;
+    std::cin >> integer;
+    while (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max()), '\n';
+        system("cls");
+        std::cout << "That, my friend, is not a number...\n";
+        std::cin >> integer;
+    }
+    return integer;
+}
+
+
 void task1() 
 {
+    //Output immediatly
     std::cout << "1. Write a program that writes from 1 to 100." << '\n' << std::endl;
     std::cout << "1.1. Use a while-loop:\n" << std::endl;
+    
     int count{ 1 };
     while (count < 101) {
         std::cout << count << ' ';
@@ -30,6 +46,7 @@ void task1()
 
 void task2() {
 
+    //Output immediatly
     std::cout << "2. Write a program that writes number from 100 down to 1 to screen. Use for-loop\n" << std::endl;
 
 
@@ -82,7 +99,7 @@ void task6() {
     std::cout << "6. Make a program that writes 5 to 50 in steps of 5. Use..while." << '\n' << "TBA\n\n" << std::endl;
 
 
-
+    char done6 = _getch();
 }
 
 
@@ -131,6 +148,7 @@ void task7() {
     }
 
     std::cout << "\n\nWell done! Press any button to continue." << std::endl;
+    char done7 = _getch();
 }
 */
 
@@ -149,8 +167,10 @@ int main()
 
     system("cls");
     std::cout << "This is Erik Holst's assignment Weekly 2.\n";
-    std::cout << "It conatins 7 tasks now. \n";
-    std::cout << "Some task are just information on the task or previous task, while task 7 is interactive.";
+    std::cout << "It conatins 8 tasks now. \n";
+    std::cout << "Some task are just information on the task or previous task, while task 7 is interactive.\n";
     std::cout << "To choose a task, type a number between 1 and 8, then press enter. \n";
+
+
     return 0;
 }
